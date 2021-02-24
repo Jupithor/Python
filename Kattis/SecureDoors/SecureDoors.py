@@ -1,3 +1,4 @@
+#https://open.kattis.com/problems/securedoors
 import sys
 
 cases = int(sys.stdin.readline())
