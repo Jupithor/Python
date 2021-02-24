@@ -24,5 +24,3 @@ print("paradox avoided")
 
     
 
-    
-
