@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+#client.py
+
+import socket
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+host = "192.168.80.68"
+port = 2000
+
+client.connect((host,port)) #connect to client
+for i in range(10):
+    msg = client.recv(1024)
+    print (msg.decode('ascii'))
+    client.send(msg)
+
+flag = client.recv(1024)
+print (flag.decode('ascii'))
+client.close()
