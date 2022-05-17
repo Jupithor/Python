@@ -4,7 +4,7 @@
 import socket
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = "192.168.49.188"
+host = socket.gethostname()
 port=8000
 
 server.bind((host,port))
@@ -15,6 +15,8 @@ print("Server is running and listening")
 while True:
         conn, address = server.accept() #make connection to client
         print("connected to %s" %str(address))
+        msg = 'Connection established to %s' %str(host)
+        conn.send(msg.encode('ascii'))
         test=conn.recv(1024)
         if not test: continue
         print(test)
