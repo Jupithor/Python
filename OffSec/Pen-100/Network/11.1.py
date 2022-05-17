@@ -4,7 +4,7 @@
 import socket
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = "192.168.80.68"
+host = socket.gethostname()
 port = 2000
 
 client.connect((host,port)) #connect to client
