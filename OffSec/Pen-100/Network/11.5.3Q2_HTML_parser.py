@@ -2,7 +2,6 @@
 #html parser
 
 import requests
-import urllib3
 from urllib.request import urlopen
 from bs4 import BeautifulSoup 
 
