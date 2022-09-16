@@ -1,1 +1,0 @@
-linky = [["FirstPointer",0,"",""]]
